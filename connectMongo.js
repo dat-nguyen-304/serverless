@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const connectString = `mongodb+srv://dathdws:122711@cluster-hdws.05nxugs.mongodb.net/`;
+const connectString = process.env.DB_URL;
 
 class Database {
   static instance;
